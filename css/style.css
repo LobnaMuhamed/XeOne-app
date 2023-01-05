@@ -5,7 +5,7 @@
   --hover-color: rgb(100, 48, 148);
   --bg-color: #f6f6f6;
   --main-font: "Raleway", sans-serif;
-  --main-transition: 100px;
+  --main-transition: 0.3s;
   --padding-top-section: 100px;
   --padding-bottom-section: 100px;
   --swiper-theme-color: var(--main-color) !important;
@@ -29,49 +29,125 @@ a {
   text-decoration: none;
 }
 /* ===== Utilties ===== */
-
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*  Medium  */
+@media (min-width: 992px) {
+  .container {
+    width: 850px;
+  }
+}
+/* semi Large */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 /* ===== Header ===== */
-header {
+.header {
   background-image: url(../images//studio-fade.jpg);
   background-repeat: no-repeat;
   background-position: left top;
   height: 100vh;
 }
 /* ===== NavBar ===== */
-header nav .container {
+.header .container nav {
   display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-  padding: 30px;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 20px;
 }
-header nav .logo
-{
-  position: absolute;
-  left: 0px;
+.header .navbar_brand {
+  color: var(--btn-color);
+  font-size: 30px;
 }
-header nav ul {
+.header .navbar_brand span {
+  font-weight: 300;
+}
+.header .navbar_toggle {
+  font-size: 25px;
+  color: var(--btn-color);
+  padding-top: 7px;
+  display: none;
+}
+.header .links {
+  display: flex;
+  gap: 30px;
+}
+.header ul {
   display: flex;
   gap: 40px;
+  padding-top: 10px;
 }
-header nav ul li a {
+.header .links ul li a {
   color: var(--btn-color);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
   font-weight: 500;
   text-transform: capitalize;
   transition: var(--main-transition);
 }
-header nav ul li a:hover {
+.header .links ul li a:hover {
   color: var(--main-color);
 }
-header nav .bar_icon {
-color: var(--btn-color);
-font-size: 30px;
-cursor: pointer;
+.header .bar_btn {
+  font-size: 25px;
+  color: var(--btn-color);
+  padding-top: 7px;
 }
-
-header nav .sideMenu {
+/* Social Media Links */
+.social_media {
   display: none;
 }
+.social_media i {
+  color: var(--btn-color);
+  font-size: 12px;
+  padding: 8px 10px;
+  background-color: var(--main-color);
+  border-radius: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+/* Side Menu */
+.header .sideMenu {
+  display: none;
+}
+@media (max-width: 991px) {
+  .header .links {
+    display: none;
+  }
+  .header .navbar_toggle {
+    display: block;
+  }
+}
+@media (max-width: 769px) {
+  .social_media {
+    display: block;
+  }
+}
 
+/* ===== Start Home Section ===== */
+section.home {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+/* ===== End Home Section ===== */
 /* ===== End Header ===== */
