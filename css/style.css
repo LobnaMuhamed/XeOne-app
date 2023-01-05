@@ -1,0 +1,41 @@
+/* Start Variables */
+:root {
+  --main-color: rgb(0, 189, 214);
+  --btn-color: #fff;
+  --hover-color: rgb(100, 48, 148);
+  --bg-color: #f6f6f6;
+  --main-font: "Raleway", sans-serif;
+  --main-transition: 100px;
+  --padding-top-section: 100px;
+  --padding-bottom-section: 100px;
+  --swiper-theme-color: var(--main-color) !important;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--main-font);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* End Global Rules */
+/* Start Utilties*/
+
+
+/* End Utilties */
+
+/* Start Header */
+/* Start NavBar */
+
+/* End Header */
