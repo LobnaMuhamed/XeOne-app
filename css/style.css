@@ -299,7 +299,7 @@ section.service .container .img_section img {
   }
 }
 @media (max-width: 576px) {
-  section.service .container{
+  section.service .container {
     flex-direction: column;
   }
   section.service .container .text_section {
@@ -315,6 +315,29 @@ section.service .container .img_section img {
 }
 /* ===== End Service Section */
 /* ===== Start Feature Section ===== */
+section.features {
+  background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+  padding-top: var(--padding-top-section);
+  padding-bottom: var(--padding-bottom-section);
+  color: var(--btn-color);
+  text-align: center;
+}
+section.features h1 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+section.features .container .items {
+  display: flex;
+}
+section.features .container .items .item {
+  display: flex;
+  flex-direction: column;
+}
+section.features .container .items .item span {
+  font-family: var(--second-font);
+  font-size: 28px;
+  line-height: 90px;
+}
 /* ===== End Feature Section ===== */
 /* Samll */
 
