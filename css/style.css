@@ -109,6 +109,26 @@ h1 {
     line-height: 55px;
   }
 }
+.text_section span {
+  font-family: var(--second-font);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--main-color);
+}
+.text_section h1 {
+  font-weight: 300;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.text_section p {
+  font-size: 14px;
+  font-family: var(--second-font);
+  color: var(--parag-color);
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 50px;
+}
 /* ===== Header ===== */
 .header {
   background-image: url(../images//studio-fade.jpg);
@@ -263,26 +283,7 @@ section.service .container {
 section.service .container .text_section {
   flex: 0 0 50%;
 }
-section.service .container .text_section span {
-  font-family: var(--second-font);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  color: var(--main-color);
-}
-section.service .container .text_section h1 {
-  font-weight: 300;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-}
-section.service .container .text_section p {
-  font-size: 14px;
-  font-family: var(--second-font);
-  color: var(--parag-color);
-  font-weight: 400;
-  line-height: 21px;
-  margin-bottom: 50px;
-}
+
 section.service .container .img_section {
   flex: 0 0 50%;
 }
@@ -409,8 +410,18 @@ section.features .container .items .item p.pro_des {
     right: 100%;
   }
 }
-
 /* ===== End Feature Section ===== */
+/* ==== Start team Section ==== */
+section.team 
+{
+  padding-top: var(--padding-top-section);
+  padding-bottom: var(--padding-bottom-section);
+}
+section.team .container .text_section {
+  text-align: center;
+}
+
+/* ==== End team Section ==== */
 /* Samll */
 
 @keyframes ani1 {
