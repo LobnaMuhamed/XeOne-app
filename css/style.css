@@ -327,17 +327,22 @@ section.features h1 {
   text-transform: capitalize;
 }
 section.features .container .items {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 section.features .container .items .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-section.features .container .items .item span {
+section.features .container .items .item span.num {
   font-family: var(--second-font);
   font-size: 28px;
   line-height: 90px;
+  border: 2px solid var(--btn-color);
+  border-radius: 50%;
+  padding: 5px;
 }
 /* ===== End Feature Section ===== */
 /* Samll */
