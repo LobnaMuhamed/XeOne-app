@@ -332,6 +332,7 @@ section.features .container .items {
 section.features .container .items .item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 section.features .container .items .item span {
   font-family: var(--second-font);
