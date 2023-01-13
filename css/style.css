@@ -457,4 +457,74 @@ section.team .container .text_section {
 }
 
 /* Swiper Code */
+section.team .slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.team .slide-container .card {
+  position: relative;
+}
+section.team .slide-container .card-image {
+  width: 400px;
+  height: 400px;
+}
+section.team .slide-container .card-image .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.team .slide-container .card-content {
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    rgb(66, 63, 156),
+    rgb(131, 35, 89) 90%
+  );
+  width: 100%;
+  color: white;
+  
+}
+section.team .slide-container .card-content h2 {
+  font-family: var(--main-font);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+}
+section.team .slide-container .card-content h4 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+section.team .slide-container .card-progress
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+section.team .slide-container .card-progress .progress {
+  background-color: var(--btn-color);
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 80%;
+}
+section.team .slide-container .card-progress .progress span
+{
+  background-image: linear-gradient(
+    to right,
+    rgb(246, 102, 63) 50%,
+    rgb(237, 20, 91)
+  );
+  text-align: center;
+}
 
+section.team .slide-container .card-progress .progress span.w-75
+{
+  width: 75%;
+}
+section.team .slide-container .card-progress .progress span.w-90
+{
+  width: 90%
+}
