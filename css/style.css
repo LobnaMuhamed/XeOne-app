@@ -387,8 +387,7 @@ section.features .container .items .item p.pro_des {
     flex: 0 0 50%;
   }
 }
-@media (min-width:634px) and (max-width:992px)
-{
+@media (min-width: 634px) and (max-width: 992px) {
   section.features .container .items .item {
     flex: 0 0 40%;
   }
@@ -412,8 +411,7 @@ section.features .container .items .item p.pro_des {
 }
 /* ===== End Feature Section ===== */
 /* ==== Start team Section ==== */
-section.team 
-{
+section.team {
   padding-top: var(--padding-top-section);
   padding-bottom: var(--padding-bottom-section);
 }
@@ -456,4 +454,38 @@ section.team .container .text_section {
   100% {
     opacity: 0;
   }
+}
+
+/* Swiper Code */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
