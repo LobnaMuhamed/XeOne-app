@@ -24,9 +24,11 @@ myBullets.forEach(function(ele){
 
  var swiper = new Swiper(".mySwiper", {
    slidesPerView: 3,
-   spaceBetween: 30,
+   spaceBetween: 25,
    slidesPerGroup: 3,
    loop: true,
+   fade: 'true',
+   grabCursor: 'true',
    loopFillGroupWithBlank: true,
 
    navigation: {

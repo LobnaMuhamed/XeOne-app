@@ -460,37 +460,11 @@ section.team .container .text_section {
 /* Swiper Code */
 
 
-section.team .slide-container {
-  background-color: #eee;
-}
 section.team .slide-container .card {
   position: relative;
   overflow: hidden;
   outline: 20px solid var(--btn-color);
   height: 460px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-section.team .slide-container .swiper-slide {
-  text-align: center;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 section.team .slide-container .card-image {

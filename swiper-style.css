@@ -1,15 +1,40 @@
+body {
+  background-color: #eee;
+}
 .swiper-container {
   position: relative;
   height: 100%;
 }
 .swiper {
-  width: 450px;
-  height: 500px;
+width: 80%;
+overflow: hidden;
 }
 
-.swiper-slide img {
+.swiper-container .swiper-wrapper .card {
+}
+.swiper-container .swiper-wrapper .slide-container 
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.swiper-container .swiper-slide .card-img {
+  width: 100%;
+  display: block;
+}
+.swiper-container .swiper-slide .card-img img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-container .swiper-slide .card-content {
+  background-image: linear-gradient(
+    to right,
+    rgb(66, 63, 156),
+    rgb(131, 35, 89) 90%
+  );
+  width: 100%;
 }
