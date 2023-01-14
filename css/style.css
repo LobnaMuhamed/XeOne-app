@@ -414,6 +414,7 @@ section.features .container .items .item p.pro_des {
 section.team {
   padding-top: var(--padding-top-section);
   padding-bottom: var(--padding-bottom-section);
+  background-color: rgb(246, 246, 246);
 }
 section.team .container .text_section {
   text-align: center;
@@ -457,17 +458,45 @@ section.team .container .text_section {
 }
 
 /* Swiper Code */
+
+
 section.team .slide-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #eee;
 }
 section.team .slide-container .card {
   position: relative;
+  overflow: hidden;
+  outline: 20px solid var(--btn-color);
+  height: 460px;
 }
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.team .slide-container .swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
 section.team .slide-container .card-image {
   width: 400px;
   height: 400px;
+  display: block;
 }
 section.team .slide-container .card-image .card-img {
   width: 100%;
@@ -480,7 +509,7 @@ section.team .slide-container .card-content {
   gap: 15px;
   padding: 20px 0;
   position: absolute;
-  bottom: 0;
+  bottom: -23%;
   background-image: linear-gradient(
     to right,
     rgb(66, 63, 156),
@@ -489,6 +518,10 @@ section.team .slide-container .card-content {
   width: 100%;
   color: white;
   text-align: center;
+  transition: calc(var(--main-transition) * 2) linear;
+}
+section.team .slide-container .card:hover .card-content {
+  bottom: 0%;
 }
 section.team .slide-container .card-content h2 {
   font-family: var(--main-font);

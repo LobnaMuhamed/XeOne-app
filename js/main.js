@@ -25,8 +25,12 @@ myBullets.forEach(function(ele){
  var swiper = new Swiper(".mySwiper", {
    slidesPerView: 3,
    spaceBetween: 30,
-   pagination: {
-     el: ".swiper-pagination",
-     clickable: true,
+   slidesPerGroup: 3,
+   loop: true,
+   loopFillGroupWithBlank: true,
+
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
    },
  });
