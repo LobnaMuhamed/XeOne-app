@@ -475,6 +475,9 @@ section.team .slide-container .card-image .card-img {
   object-fit: cover;
 }
 section.team .slide-container .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   padding: 20px 0;
   position: absolute;
   bottom: 0;
@@ -485,7 +488,7 @@ section.team .slide-container .card-content {
   );
   width: 100%;
   color: white;
-  
+  text-align: center;
 }
 section.team .slide-container .card-content h2 {
   font-family: var(--main-font);
@@ -498,33 +501,31 @@ section.team .slide-container .card-content h4 {
   font-weight: 400;
   line-height: 18px;
 }
-section.team .slide-container .card-progress
-{
-  position: relative;
-  display: flex;
-  flex-direction: column;
+section.team .slide-container .card-progress {
+  text-align: start;
+  margin-left: 20px;
 }
 section.team .slide-container .card-progress .progress {
   background-color: var(--btn-color);
-  margin: 0 auto;
   border-radius: 10px;
   width: 80%;
+  height: 12px;
+  margin-top: 3px;
 }
-section.team .slide-container .card-progress .progress span
-{
+section.team .slide-container .card-progress .progress span {
+  display: block;
   background-image: linear-gradient(
     to right,
     rgb(246, 102, 63) 50%,
     rgb(237, 20, 91)
   );
   text-align: center;
+  height: inherit;
 }
 
-section.team .slide-container .card-progress .progress span.w-75
-{
+section.team .slide-container .card-progress .progress span.w-75 {
   width: 75%;
 }
-section.team .slide-container .card-progress .progress span.w-90
-{
-  width: 90%
+section.team .slide-container .card-progress .progress span.w-90 {
+  width: 90%;
 }
