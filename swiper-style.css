@@ -1,20 +1,41 @@
+body {
+  background-color: #eee;
+}
 .swiper-container {
   position: relative;
   height: 100%;
-  background-color: green;
 }
 .swiper {
-  width: 80%;
+  width: 90%;
   overflow: hidden;
-  background-color: blue;
 }
 .swiper-container .swiper-wrapper .card {
   position: relative;
-  /* overflow: hidden; */
-  background-color: red;
+  overflow: hidden;
+  width: 400px;
+  height: 450px;
+  border-top: 20px solid white;
+}
+.swiper-container .swiper-wrapper .card:after,
+.swiper-container .swiper-wrapper .card:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  z-index: 2;
+}
+.swiper-container .swiper-wrapper .card:before,
+.swiper-container .swiper-wrapper .card:after {
+  bottom: 0;
+}
+.swiper-container .swiper-wrapper .card:after {
+  right: 0;
 }
 
 .swiper-container .swiper-slide .card-img {
+  width: 100%;
 }
 .swiper-container .swiper-slide .card-img img {
   width: 100%;
@@ -30,5 +51,9 @@
   width: 100%;
   transition: 0.5s linear;
   position: absolute;
-  bottom: 50%;
+  bottom: -20%;
 }
+.swiper-container .swiper-wrapper .card:hover .card-content {
+  bottom: 0;
+}
+

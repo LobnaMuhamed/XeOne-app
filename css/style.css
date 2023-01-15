@@ -415,10 +415,13 @@ section.team {
   padding-top: var(--padding-top-section);
   padding-bottom: var(--padding-bottom-section);
   background-color: rgb(246, 246, 246);
+  position: relative;
+  height: 100%;
 }
 section.team .container .text_section {
   text-align: center;
 }
+
 
 /* ==== End team Section ==== */
 /* Samll */
@@ -460,66 +463,81 @@ section.team .container .text_section {
 /* Swiper Code */
 
 
-section.team .slide-container .card {
+.swiper {
+  overflow: hidden;
+  /* width: 100%; */
+}
+section.team .swiper-wrapper .card {
+  color: var(--btn-color);
   position: relative;
   overflow: hidden;
-  outline: 20px solid var(--btn-color);
-  height: 460px;
+  width: 380px;
+  height: 450px;
+  border-top: 20px solid white;
 }
-
-section.team .slide-container .card-image {
-  width: 400px;
-  height: 400px;
-  display: block;
-}
-section.team .slide-container .card-image .card-img {
-  width: 100%;
+/* section.team .swiper-wrapper .card:after,
+section.team .swiper-wrapper .card:before {
+  content: "";
+  position: absolute;
+  width: 20px;
   height: 100%;
+  background-color: white;
+  top: 0;
+  z-index: 2;
+}
+section.team .swiper-wrapper .card:before,
+section.team .swiper-wrapper .card:after {
+  bottom: 0;
+}
+section.team .swiper-wrapper .card:after {
+  right: 0;
+} */
+
+section.team .swiper-slide .card-img {
+  width: 100%;
+}
+section.team .swiper-slide .card-img img {
+  width: 100%;
   object-fit: cover;
 }
-section.team .slide-container .card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 20px 0;
-  position: absolute;
-  bottom: -23%;
+
+section.team .swiper-slide .card-content {
   background-image: linear-gradient(
     to right,
     rgb(66, 63, 156),
     rgb(131, 35, 89) 90%
   );
   width: 100%;
-  color: white;
-  text-align: center;
-  transition: calc(var(--main-transition) * 2) linear;
+  transition: 0.5s linear;
+  position: absolute;
+  /* bottom: -20%; */
 }
-section.team .slide-container .card:hover .card-content {
-  bottom: 0%;
+section.team .swiper-wrapper .card:hover .card-content {
+  bottom: 0;
 }
-section.team .slide-container .card-content h2 {
+section.team .swiper-wrapper .card-content h2 {
   font-family: var(--main-font);
   font-size: 28px;
   font-weight: 400;
   line-height: 34px;
 }
-section.team .slide-container .card-content h4 {
+section.team .swiper-wrapper .card-content h4 {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
 }
-section.team .slide-container .card-progress {
+section.team .swiper-wrapper .card-content .card-progress {
   text-align: start;
   margin-left: 20px;
 }
-section.team .slide-container .card-progress .progress {
+section.team .card-progress .progress {
   background-color: var(--btn-color);
   border-radius: 10px;
   width: 80%;
   height: 12px;
   margin-top: 3px;
 }
-section.team .slide-container .card-progress .progress span {
+section.team .card-progress .progress span {
   display: block;
   background-image: linear-gradient(
     to right,
@@ -530,9 +548,9 @@ section.team .slide-container .card-progress .progress span {
   height: inherit;
 }
 
-section.team .slide-container .card-progress .progress span.w-75 {
+section.team .card-progress .progress span.w-75 {
   width: 75%;
 }
-section.team .slide-container .card-progress .progress span.w-90 {
+section.team .card-progress .progress span.w-90 {
   width: 90%;
 }
