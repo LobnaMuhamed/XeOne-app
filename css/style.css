@@ -508,16 +508,29 @@ section.team .container .text_section {
   );
   width: 100%;
   position: absolute;
-  bottom: 0%;
-  padding: 10px;
+  bottom: -25%;
+  padding: 30px 10px;
   text-align: center;
   transition: 0.5s linear;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
-
-/* .swiper-container .swiper-wrapper .card:hover .card-content {
+.swiper-container .swiper-slide .card-content.spe_card 
+{
+    background-image: linear-gradient(
+    to left,
+    rgb(0, 171, 201) 20%,
+    rgb(0, 228, 206)
+  );
+}
+.swiper-container .swiper-slide .card-content.min_card 
+{
+  bottom: -15%;
+}
+.swiper-container .swiper-wrapper .card:hover .card-content {
   bottom: 0;
-} */
-
+}
 
 .swiper-wrapper .card-content h2 {
   font-family: var(--main-font);
@@ -537,7 +550,7 @@ section.team .container .text_section {
 section.team .card-progress .progress {
   background-color: var(--btn-color);
   border-radius: 10px;
-  width: 80%;
+  width: 90%;
   height: 12px;
   margin-top: 3px;
 }
