@@ -58,7 +58,7 @@ a {
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1300px;
   }
 }
 a.btn {
@@ -471,9 +471,8 @@ section.team .container .text_section {
 }
 .swiper-container .swiper-wrapper .card {
   position: relative;
-  overflow: hidden;
-  width: 400px;
   height: 450px;
+  overflow: hidden;
   border-top: 20px solid white;
 }
 .swiper-container .swiper-wrapper .card:after,
@@ -494,8 +493,12 @@ section.team .container .text_section {
 .swiper-container .swiper-wrapper .card:after {
   right: 0;
 }
-
+.swiper-container .swiper-slide .card-img {
+  width: 100%;
+}
 .swiper-container .swiper-slide .card-img img {
+  width: 100%;
+
   object-fit: cover;
 }
 
@@ -516,16 +519,14 @@ section.team .container .text_section {
   flex-direction: column;
   gap: 7px;
 }
-.swiper-container .swiper-slide .card-content.spe_card 
-{
-    background-image: linear-gradient(
+.swiper-container .swiper-slide .card-content.spe_card {
+  background-image: linear-gradient(
     to left,
     rgb(0, 171, 201) 20%,
     rgb(0, 228, 206)
   );
 }
-.swiper-container .swiper-slide .card-content.min_card 
-{
+.swiper-container .swiper-slide .card-content.min_card {
   bottom: -15%;
 }
 .swiper-container .swiper-wrapper .card:hover .card-content {
