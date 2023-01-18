@@ -6,7 +6,7 @@ body {
   height: 100%;
 }
 .swiper {
-  width: 90%;
+  width: 80%;
   overflow: hidden;
 }
 .swiper-container .swiper-wrapper .card {
