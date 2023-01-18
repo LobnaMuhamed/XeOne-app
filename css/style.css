@@ -58,7 +58,7 @@ a {
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1300px;
+    width: 1170px;
   }
 }
 a.btn {
@@ -422,43 +422,6 @@ section.team .container .text_section {
   text-align: center;
 }
 
-/* ==== End team Section ==== */
-/* Samll */
-
-@keyframes ani1 {
-  0% {
-    opacity: 0;
-  }
-  17.5% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0;
-  }
-}
-@keyframes ani2 {
-  35% {
-    opacity: 0;
-  }
-  52.5% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0;
-  }
-}
-@keyframes ani3 {
-  70% {
-    opacity: 0;
-  }
-  87.5% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 /* Swiper Code */
 
 .swiper-container {
@@ -471,9 +434,12 @@ section.team .container .text_section {
 }
 .swiper-container .swiper-wrapper .card {
   position: relative;
-  height: 450px;
   overflow: hidden;
   border-top: 20px solid white;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: center;
 }
 .swiper-container .swiper-wrapper .card:after,
 .swiper-container .swiper-wrapper .card:before {
@@ -498,10 +464,8 @@ section.team .container .text_section {
 }
 .swiper-container .swiper-slide .card-img img {
   width: 100%;
-
   object-fit: cover;
 }
-
 .swiper-container .swiper-slide .card-content {
   color: var(--bg-color);
   background-image: linear-gradient(
@@ -532,7 +496,6 @@ section.team .container .text_section {
 .swiper-container .swiper-wrapper .card:hover .card-content {
   bottom: 0;
 }
-
 .swiper-wrapper .card-content h2 {
   font-family: var(--main-font);
   font-size: 28px;
@@ -571,4 +534,57 @@ section.team .card-progress .progress span.w-75 {
 }
 section.team .card-progress .progress span.w-90 {
   width: 90%;
+}
+
+@media (max-width: 990px) {
+  .swiper-container .swiper-wrapper .card {
+    height: 400px;
+  }
+  .swiper-container .swiper-wrapper .card
+  {
+    bottom: -10px;
+  }
+  .swiper-wrapper .card-content
+  {
+    padding: 15px 10px;
+  }
+  .swiper-wrapper .card-content h2 {
+    font-size: 23px;
+  }
+}
+/* ==== End team Section ==== */
+/* Samll */
+
+@keyframes ani1 {
+  0% {
+    opacity: 0;
+  }
+  17.5% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+}
+@keyframes ani2 {
+  35% {
+    opacity: 0;
+  }
+  52.5% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+}
+@keyframes ani3 {
+  70% {
+    opacity: 0;
+  }
+  87.5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
