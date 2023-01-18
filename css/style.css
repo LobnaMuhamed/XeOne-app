@@ -58,7 +58,7 @@ a {
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1180px;
+    width: 1200px;
   }
 }
 a.btn {
@@ -422,7 +422,6 @@ section.team .container .text_section {
   text-align: center;
 }
 
-
 /* ==== End team Section ==== */
 /* Samll */
 
@@ -461,87 +460,6 @@ section.team .container .text_section {
 }
 
 /* Swiper Code */
-
-/* 
-.swiper {
-  overflow: hidden;
-   width: 100%; 
-} .swiper-wrapper .card {
-  color: var(--btn-color);
-  position: relative;
-  overflow: hidden;
-  width: 380px;
-  height: 450px;
-  border-top: 20px solid white;
-}
-.swiper-wrapper .card:after, .swiper-wrapper .card:before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  background-color: white;
-  top: 0;
-  z-index: 2;
-} .swiper-wrapper .card:before, .swiper-wrapper .card:after {
-  bottom: 0;
-} .swiper-wrapper .card:after {
-  right: 0;
-} 
- .swiper-slide .card-img {
-  width: 100%;
-} .swiper-slide .card-img img {
-  width: 100%;
-  object-fit: cover;
-}
- .swiper-slide .card-content {
-  background-image: linear-gradient(
-    to right,
-    rgb(66, 63, 156),
-    rgb(131, 35, 89) 90%
-  );
-  width: 100%;
-  transition: 0.5s linear;
-  position: absolute;
-   bottom: -20%; 
-} .swiper-wrapper .card:hover .card-content {
-  bottom: 0;
-} .swiper-wrapper .card-content h2 {
-  font-family: var(--main-font);
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 34px;
-} .swiper-wrapper .card-content h4 {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-} .swiper-wrapper .card-content .card-progress {
-  text-align: start;
-  margin-left: 20px;
-}
-section.team .card-progress .progress {
-  background-color: var(--btn-color);
-  border-radius: 10px;
-  width: 80%;
-  height: 12px;
-  margin-top: 3px;
-}
-section.team .card-progress .progress span {
-  display: block;
-  background-image: linear-gradient(
-    to right,
-    rgb(246, 102, 63) 50%,
-    rgb(237, 20, 91)
-  );
-  text-align: center;
-  height: inherit;
-}
-
-section.team .card-progress .progress span.w-75 {
-  width: 75%;
-}
-section.team .card-progress .progress span.w-90 {
-  width: 90%;
-} */
 
 .swiper-container {
   position: relative;
@@ -582,42 +500,61 @@ section.team .card-progress .progress span.w-90 {
 }
 
 .swiper-container .swiper-slide .card-content {
+  color: var(--bg-color);
   background-image: linear-gradient(
     to right,
     rgb(66, 63, 156),
     rgb(131, 35, 89) 90%
   );
   width: 100%;
-  transition: 0.5s linear;
   position: absolute;
-  bottom: -20%;
+  bottom: 0%;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s linear;
 }
-.swiper-container .swiper-wrapper .card:hover .card-content {
+
+/* .swiper-container .swiper-wrapper .card:hover .card-content {
   bottom: 0;
-}
-.swiper-container .swiper-wrapper .card:after {
-  right: 0;
-}
+} */
 
-.swiper-container .swiper-slide .card-img {
-  width: 100%;
-}
-.swiper-container .swiper-slide .card-img img {
-  width: 100%;
-  object-fit: cover;
-}
 
-.swiper-container .swiper-slide .card-content {
+.swiper-wrapper .card-content h2 {
+  font-family: var(--main-font);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+}
+.swiper-wrapper .card-content h4 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.swiper-wrapper .card-content .card-progress {
+  text-align: start;
+  margin-left: 20px;
+}
+section.team .card-progress .progress {
+  background-color: var(--btn-color);
+  border-radius: 10px;
+  width: 80%;
+  height: 12px;
+  margin-top: 3px;
+}
+section.team .card-progress .progress span {
+  display: block;
   background-image: linear-gradient(
     to right,
-    rgb(66, 63, 156),
-    rgb(131, 35, 89) 90%
+    rgb(246, 102, 63) 50%,
+    rgb(237, 20, 91)
   );
-  width: 100%;
-  transition: 0.5s linear;
-  position: absolute;
-  bottom: -20%;
+  text-align: center;
+  height: inherit;
 }
-.swiper-container .swiper-wrapper .card:hover .card-content {
-  bottom: 0;
-} 
+
+section.team .card-progress .progress span.w-75 {
+  width: 75%;
+}
+section.team .card-progress .progress span.w-90 {
+  width: 90%;
+}
