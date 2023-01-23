@@ -438,8 +438,9 @@ section.team .container .text_section {
   border-top: 20px solid white;
   display: flex;
   flex-direction: column;
+
   height: 450px;
-  justify-content: center;
+  justify-content: space-between;
 }
 .swiper-container .swiper-wrapper .card:after,
 .swiper-container .swiper-wrapper .card:before {
@@ -553,10 +554,13 @@ section.team .card-progress .progress span.w-90 {
 /* ==== End team Section ==== */
 
 /* Start Offer Section */
-section.offer .container {
+section.offer .container  {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+section.offer .container .item 
+{
   display: flex;
 }
 section.offer .img_side {
@@ -603,6 +607,7 @@ section.offer .img_side:hover:before {
 section.offer .text_side {
   flex: 0 0 50%;
   position: relative;
+  margin: 0 30px;
 }
 section.offer .text_side .text_section {
   display: flex;
@@ -614,10 +619,10 @@ section.offer .text_side .text_section {
   top: 50%;
   transform: translateY(-50%);
 }
-section.offer .text_side .text_section a {
+section.offer .text_side .text_section a.sp {
   background-color: var(--main-color);
 }
-section.offer .text_side .text_section a:hover {
+section.offer .text_side .text_section a.sp:hover {
   background-color: var(--hover-color);
 }
 /* End Offer Section */
