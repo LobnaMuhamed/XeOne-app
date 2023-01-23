@@ -558,8 +558,7 @@ section.team .card-progress .progress span.w-90 {
 /* ==== End team Section ==== */
 
 /* Start Offer Section */
-section.offer 
-{
+section.offer {
   position: relative;
 }
 section.offer .container {
@@ -570,7 +569,6 @@ section.offer .container {
 section.offer .container .item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
 }
 section.offer .img_side {
   position: relative;
@@ -592,30 +590,23 @@ section.offer .img_side::before {
   -o-transition-duration: 1.3s;
   transition-duration: 1.3s;
   transition: all 0.3s ease;
+  opacity: 0.3;
 }
 section.offer .img_side::after {
   bottom: 0;
-  opacity: 1;
   left: 0;
 }
 section.offer .img_side::before {
   right: 0;
-  opacity: 1;
   top: 0;
 }
-section.offer .img_side:hover::after {
-  bottom: 100%;
-  left: 100%;
-  width: 100%;
-}
+section.offer .img_side:hover::after,
 section.offer .img_side:hover::before {
-  top: 100%;
-  right: 100%;
-  width: 100%;
+animation: flashing 1.2s ;
 }
 
 section.offer .text_side {
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -628,10 +619,13 @@ section.offer .text_side .text_section a.sp {
 section.offer .text_side .text_section a.sp:hover {
   background-color: var(--hover-color);
 }
-@media (max-width:990px) {
-  section.offer .container .item
-  {
-    grid-template-columns: repeat(1,1fr);
+@media (max-width: 990px) {
+  section.offer .container {
+    display: grid;
+    gap: 100px;
+  }
+  section.offer .container .item {
+    grid-template-columns: repeat(1, 1fr);
     gap: 50px;
   }
 }
@@ -669,5 +663,19 @@ section.offer .text_side .text_section a.sp:hover {
   }
   100% {
     opacity: 0;
+  }
+}
+/* --------------------------------------- */
+
+@keyframes flashing {
+  0%,40% 
+  {
+    opacity: 0.7;
+  }
+  100% 
+  {
+    opacity: 0 ;
+    width: 90%;
+    height: 100%;
   }
 }

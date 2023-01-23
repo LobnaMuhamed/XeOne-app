@@ -30,7 +30,7 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 
-  breakpoints:{
+  breakpoints: {
     0: {
       slidesPerView: 1,
     },
@@ -42,3 +42,12 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+/*----------------------------------------*/
+
+// var myImg = document.querySelectorAll("section.offer .container .img_side");
+// myImg.forEach((ele) => {
+//   ele.onmouseenter = () => {
+    
+//   };
+// });
