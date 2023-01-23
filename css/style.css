@@ -436,11 +436,15 @@ section.team .container .text_section {
   position: relative;
   overflow: hidden;
   border-top: 20px solid white;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   flex-direction: column;
-
   height: 450px;
-  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .swiper-container .swiper-wrapper .card {
+    /* height: 300px; */
+  }
 }
 .swiper-container .swiper-wrapper .card:after,
 .swiper-container .swiper-wrapper .card:before {
@@ -554,17 +558,23 @@ section.team .card-progress .progress span.w-90 {
 /* ==== End team Section ==== */
 
 /* Start Offer Section */
-section.offer .container  {
+section.offer 
+{
+  position: relative;
+}
+section.offer .container {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-section.offer .container .item 
-{
-  display: flex;
+section.offer .container .item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
 }
 section.offer .img_side {
   position: relative;
+  overflow: hidden;
 }
 section.offer .img_side img {
   width: 100%;
@@ -572,7 +582,7 @@ section.offer .img_side img {
 }
 section.offer .img_side::after,
 section.offer .img_side::before {
-  content:" ";
+  content: " ";
   background: var(--white-color);
   height: 0;
   width: 0;
@@ -582,48 +592,48 @@ section.offer .img_side::before {
   -o-transition-duration: 1.3s;
   transition-duration: 1.3s;
   transition: all 0.3s ease;
-  animation: shine 0.75s;
 }
-section.offer .img_side img::after {
+section.offer .img_side::after {
   bottom: 0;
-  opacity: 0.7;
+  opacity: 1;
   left: 0;
 }
-section.offer .img_side img::before {
+section.offer .img_side::before {
   right: 0;
   opacity: 1;
   top: 0;
 }
-section.offer .img_side:hover:after {
+section.offer .img_side:hover::after {
   bottom: 100%;
   left: 100%;
   width: 100%;
 }
-section.offer .img_side:hover:before {
+section.offer .img_side:hover::before {
   top: 100%;
   right: 100%;
-  width: 100%
+  width: 100%;
 }
+
 section.offer .text_side {
-  flex: 0 0 50%;
-  position: relative;
-  margin: 0 30px;
-}
-section.offer .text_side .text_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  justify-content: center;
 }
 section.offer .text_side .text_section a.sp {
   background-color: var(--main-color);
 }
 section.offer .text_side .text_section a.sp:hover {
   background-color: var(--hover-color);
+}
+@media (max-width:990px) {
+  section.offer .container .item
+  {
+    grid-template-columns: repeat(1,1fr);
+    gap: 50px;
+  }
 }
 /* End Offer Section */
 /* Samll */
