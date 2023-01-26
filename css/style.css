@@ -8,8 +8,7 @@
   --main-font: "Raleway", sans-serif;
   --second-font: "Open Sans", sans-serif;
   --main-transition: 0.3s;
-  --padding-top-section: 100px;
-  --padding-bottom-section: 100px;
+  --padding-section: 100px;
   --swiper-theme-color: var(--main-color) !important;
 }
 
@@ -129,7 +128,7 @@ h1 {
   line-height: 21px;
   margin-bottom: 50px;
 }
-/* ===== Header ===== */
+/* ########## Header ########## */
 .header {
   background-image: url(../images//studio-fade.jpg);
   background-repeat: no-repeat;
@@ -219,7 +218,7 @@ h1 {
   }
 }
 
-/* ===== Start Home Section ===== */
+/* **************** Start Home Section **************** */
 section.home {
   position: absolute;
   top: 70%;
@@ -268,13 +267,14 @@ section.home .bullets li {
 section.home .bullets .active_Bullet {
   background-color: var(--main-color);
 }
-/* ===== End Home Section ===== */
-/* ===== End Header ===== */
+/* ================ End Home Section ================ */
 
-/* ===== Start Service Section */
+/* ########## End Header ########## */
+
+/* **************** Start Service Section **************** */
 section.service {
-  padding-top: var(--padding-top-section);
-  padding-bottom: var(--padding-bottom-section);
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
 }
 section.service .container {
   display: flex;
@@ -314,12 +314,12 @@ section.service .container .img_section img {
     width: 100%;
   }
 }
-/* ===== End Service Section */
-/* ===== Start Feature Section ===== */
+/* ================  End Service Section ================  */
+/* ****************  Start Feature Section ****************  */
 section.features {
   background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
-  padding-top: var(--padding-top-section);
-  padding-bottom: var(--padding-bottom-section);
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
   color: var(--white-color);
   text-align: center;
 }
@@ -409,20 +409,21 @@ section.features .container .items .item p.pro_des {
     right: 100%;
   }
 }
-/* ===== End Feature Section ===== */
-/* ==== Start team Section ==== */
+/* ================  End Feature Section ================  */
+/* ****************  Start team Section ****************  */
 section.team {
-  padding-top: var(--padding-top-section);
-  padding-bottom: var(--padding-bottom-section);
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
   background-color: rgb(246, 246, 246);
   position: relative;
   height: 100%;
+  overflow: hidden;
 }
 section.team .container .text_section {
   text-align: center;
 }
 
-/* Swiper Code */
+/* Swiper Code  */
 
 .swiper-container {
   position: relative;
@@ -440,11 +441,6 @@ section.team .container .text_section {
   grid-template-rows: 1fr 1fr;
   flex-direction: column;
   height: 450px;
-}
-@media (max-width: 768px) {
-  .swiper-container .swiper-wrapper .card {
-    /* height: 300px; */
-  }
 }
 .swiper-container .swiper-wrapper .card:after,
 .swiper-container .swiper-wrapper .card:before {
@@ -555,11 +551,12 @@ section.team .card-progress .progress span.w-90 {
     font-size: 23px;
   }
 }
-/* ==== End team Section ==== */
+/* ================  End team Section ================  */
 
-/* Start Offer Section */
+/* ****************  Start Offer Section **************** */
 section.offer {
   position: relative;
+  padding-bottom: var(--padding-section);
 }
 section.offer .container {
   width: 100%;
@@ -586,11 +583,6 @@ section.offer .img_side::before {
   width: 0;
   z-index: 1;
   position: absolute;
-  -webkit-transition-duration: 1.3s;
-  -o-transition-duration: 1.3s;
-  transition-duration: 1.3s;
-  transition: all 0.3s ease;
-  opacity: 0.3;
 }
 section.offer .img_side::after {
   bottom: 0;
@@ -602,16 +594,19 @@ section.offer .img_side::before {
 }
 section.offer .img_side:hover::after,
 section.offer .img_side:hover::before {
-animation: flashing 1.2s ;
+  animation: flashing 1.2s;
 }
 
 section.offer .text_side {
   display: grid;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+section.offer .text_side .text_section {
+  width: 80%;
+  margin: 0 auto;
 }
 section.offer .text_side .text_section a.sp {
   background-color: var(--main-color);
@@ -629,7 +624,73 @@ section.offer .text_side .text_section a.sp:hover {
     gap: 50px;
   }
 }
-/* End Offer Section */
+/*================ End Offer Section ================ */
+
+/* **************** Start Portfolio Section **************** */
+section.portfolio {
+  background-color: var(--bg-color);
+}
+
+section.portfolio .container .items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 30px;
+}
+section.portfolio .container .item_wrapper {
+  position: relative;
+  flex: 0 0 50%;
+}
+section.portfolio .container .item_wrapper img {
+  display: inline-block;
+  object-fit: cover;
+  border: 20px solid var(--white-color);
+}
+section.portfolio .container .item_wrapper .text_section {
+  text-align: center;
+  width: 95%;
+}
+section.portfolio .container .item_wrapper.one {
+  top: -100px;
+}
+section.portfolio .container .item_wrapper.two {
+  top: 100px;
+}
+section.portfolio .container .item_wrapper.three {
+  top: -80px;
+}
+section.portfolio .container .item_wrapper.four {
+  top: -300px;
+}
+section.portfolio .container .item_wrapper.five {
+  top: -280px;
+}
+section.portfolio .container .item_wrapper.content {
+  display: flex;
+  font-family: var(--second-font);
+}
+section.portfolio .container .item_wrapper.content p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--parag-color);
+}
+section.portfolio .container .item_wrapper.content p.first_p
+{
+  text-transform: capitalize;
+}
+section.portfolio .container .item_wrapper.content h2 {
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 84px;
+  background: linear-gradient(90deg, #00e3ce, #00abc9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.portfolio .container .item_wrapper.hidden {
+  display: none;
+}
+/*================ End Portfolio Section ================  */
 /* Samll */
 
 @keyframes ani1 {
@@ -668,13 +729,12 @@ section.offer .text_side .text_section a.sp:hover {
 /* --------------------------------------- */
 
 @keyframes flashing {
-  0%,40% 
-  {
-    opacity: 0.7;
+  0%,
+  40% {
+    opacity: 0.5;
   }
-  100% 
-  {
-    opacity: 0 ;
+  100% {
+    opacity: 0;
     width: 90%;
     height: 100%;
   }
